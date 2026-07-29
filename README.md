@@ -15,37 +15,37 @@ Add this package to your Xcode project:
 
 ### Requirements
 
-- iOS 12.0+
+- iOS 15.0+
 - Xcode 14+
-
-## Configuration
-
-Add your AdGem App ID to your app's `Info.plist`:
-
-```xml
-<key>AdGemAppID</key>
-<integer>YOUR_APP_ID</integer>
-```
-
-> **Note:** `AdGemAppID` must be an integer, not a string.
 
 ## Usage
 
 ```swift
 import AdGemSdk
 
-// Set player metadata
-let metadata = AdGemPlayerMetadata.Builder
-    .initWithPlayerId(playerId: "player-123")
-    .playerAge(age: 25)
-    .build()
-AdGem.setPlayerMetaData(metaData: metadata)
-
-// Set delegate to receive callbacks
+// 1. Set the delegate and initialize the SDK as early as possible
+//    (e.g. in application(_:didFinishLaunchingWithOptions:)).
+//    initialize() does not hit the network.
 AdGem.delegate = self
+AdGem.initialize(configuration: AdGemConfiguration(appId: "YOUR_APP_ID"))
 
-// Show the offerwall
+// 2. Once the player's identity is known, set the player.
+//    This triggers the session and makes the offerwall available.
+let metadata = AdGemPlayerMetadata.Builder(playerId: "player-123")
+    .age(25)
+    .build()
+AdGem.setPlayer(metadata)
+
+// 3. Show the offerwall.
 AdGem.showOfferwall()
+
+// 4. Switch identity at any time by calling setPlayer with a different player ID.
+AdGem.setPlayer(
+    AdGemPlayerMetadata.Builder(playerId: "player-456").build()
+)
+
+// 5. Tear down the SDK on logout or when you need a clean slate.
+AdGem.close()
 ```
 
 ## Documentation
