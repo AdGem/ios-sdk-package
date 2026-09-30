@@ -10,8 +10,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "AdGemSdk",
-            url: "https://adgem-framework.s3.amazonaws.com/iOS-3.4.1.zip",
-            checksum: "16c718df9cb62c02f27c5f34fb0849d9a8e55f51f68ba72f16232dc4e5f08d6a"
+            url: "https://adgem-framework.s3.amazonaws.com/iOS-3.5.0.zip",
+            checksum: "4006c4a1b77f99f6477cf098b35bf5ecbb32072b4b6c3b9ba475f76905517ef3"
         )
     ]
 )
