@@ -16,7 +16,7 @@ Add this package to your Xcode project:
 ### Requirements
 
 - iOS 15.0+
-- Xcode 14+
+- Xcode 26+
 
 ## Usage
 

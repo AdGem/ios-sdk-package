@@ -1,4 +1,4 @@
-// swift-tools-version:5.7
+// swift-tools-version:6.2
 import PackageDescription
 
 let package = Package(
@@ -10,8 +10,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "AdGemSdk",
-            url: "https://adgem-framework.s3.amazonaws.com/iOS-3.5.0.zip",
-            checksum: "4006c4a1b77f99f6477cf098b35bf5ecbb32072b4b6c3b9ba475f76905517ef3"
+            url: "https://adgem-framework.s3.amazonaws.com/iOS-3.6.0.zip",
+            checksum: "f8da7f38d8c87e8e776d76c1a2066393ba872b4788c1a3e24c7cb4f78e37ec09"
         )
     ]
 )
