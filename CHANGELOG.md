@@ -1,5 +1,12 @@
 # Changelog
 
+# [3.6.0](https://github.com/AdGem/iOS-SDK/compare/3.5.0...3.6.0) (2026-11-13)
+
+
+### Features
+
+* report the downstream SDK's framework on every telemetry event ([#282](https://github.com/AdGem/iOS-SDK/issues/282)) ([3adefbc](https://github.com/AdGem/iOS-SDK/commit/3adefbca98433ff7d3246deba94312f8cc4f72ae))
+
 # [3.5.0](https://github.com/AdGem/iOS-SDK/compare/3.4.1...3.5.0) (2026-09-30)
 
 
